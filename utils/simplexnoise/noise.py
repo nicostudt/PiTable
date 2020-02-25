@@ -28,8 +28,8 @@ def normalize(x):
 
 
 class PerlinNoise(object):
-    """ 
-        Implementation of 1D Perlin Noise ported from C code: 
+    """
+        Implementation of 1D Perlin Noise ported from C code:
         https://github.com/stegu/perlin-noise/blob/master/src/noise1234.c
     """
 
@@ -45,6 +45,7 @@ class PerlinNoise(object):
         self.frequencies = [1.0 / pow(2, i) for i in xrange(self.num_octaves)]
         self.amplitudes = [pow(persistence, len(self.octaves) - i)
                            for i in xrange(self.num_octaves)]
+
 
     def noise(self, x):
         noise = [
@@ -150,7 +151,7 @@ class SimplexNoise(object):
                 noise_scale=self.noise_scale
             ) * self.amplitudes[i] for i in xrange(self.num_octaves)]
 
-        return sum(noise)
+        return (sum(noise) + 4.1) / 8.2
 
     def fractal(self, x=0, y=0, z=0, hgrid=0, lacunarity=DEFAULT_LACUNARITY, gain=DEFAULT_GAIN):
         """ A more refined approach but has a much slower run time """
@@ -170,7 +171,6 @@ class SimplexNoise(object):
 
             frequency *= lacunarity
             amplitude *= gain
-
         return sum(noise)
 
 

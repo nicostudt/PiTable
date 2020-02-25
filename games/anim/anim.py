@@ -31,7 +31,6 @@ class Anim(Game):
 
             if sheet.height == 16:
                 self.sheets.append(sheet)
-                print("Loaded " + filename)
 
     def initialize(self):
         if len(self.sheets) == 0:

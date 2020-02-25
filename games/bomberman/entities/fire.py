@@ -1,7 +1,6 @@
 from .entity import Entity
 import random
 from .color import *
-from ..simplexnoise.noise import SimplexNoise, normalize
 
 
 class Fire(Entity):

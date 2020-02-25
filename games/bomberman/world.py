@@ -59,7 +59,7 @@ class World():
                 if item.pos == player.pos:
                     player.addItem(item)
                     self.items.remove(item)
-
+                    
         for bomb in self.bombs:
             bomb.update(dt)
 

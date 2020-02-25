@@ -3,7 +3,7 @@
 import sys
 import pygame
 import signal
-import engine.joystick as joystick
+import joystick as joystick
 import time
 
 

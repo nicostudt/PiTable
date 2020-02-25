@@ -9,3 +9,4 @@ from games.simon_says.simonSays import SimonSays
 from games.space_invaders.spaceInvaders import SpaceInvaders
 from games.bomberman.bomberman import Bomberman
 from games.pyHero.pyhero import PyHero
+from games.dino.dino import Dino
