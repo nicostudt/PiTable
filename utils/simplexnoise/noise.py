@@ -142,7 +142,7 @@ class SimplexNoise(object):
         self.amplitudes = [pow(persistence, len(self.octaves) - i)
                            for i in xrange(self.num_octaves)]
 
-    def noise(self, x=0, y=0, z=0):
+    def noise(self, x=0, y=0, z=0, mul = 1):
         noise = [
             self.octaves[i].noise(
                 xin=x / self.frequencies[i],
@@ -151,7 +151,7 @@ class SimplexNoise(object):
                 noise_scale=self.noise_scale
             ) * self.amplitudes[i] for i in xrange(self.num_octaves)]
 
-        return (sum(noise) + 4.1) / 8.2
+        return (sum(noise) + mul) / (mul*2)
 
     def fractal(self, x=0, y=0, z=0, hgrid=0, lacunarity=DEFAULT_LACUNARITY, gain=DEFAULT_GAIN):
         """ A more refined approach but has a much slower run time """

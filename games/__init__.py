@@ -10,3 +10,4 @@ from games.space_invaders.spaceInvaders import SpaceInvaders
 from games.bomberman.bomberman import Bomberman
 from games.pyHero.pyhero import PyHero
 from games.dino.dino import Dino
+from games.flappy_bird.birdGame import BirdGame

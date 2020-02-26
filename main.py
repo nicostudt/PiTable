@@ -16,7 +16,7 @@ if __name__ == "__main__":
 
     except (ImportError, RuntimeError):
         from display.pygamePixelDisplay import PygamePixelDisplay
-        display = PygamePixelDisplay(caption=game.getName())
+        display = PygamePixelDisplay(caption=game.getName(), gridSize=[16, 16])
 
     screensaver = games.Anim()
 

@@ -51,6 +51,9 @@ class Game(object):
             for x in range(start, 16, 2):
                 screen.setPixel(x, y, [255, 255, 255])
 
+    def onScreen(self, x, y):
+        return x >= 0 and x < self.size[0] and y >= 0 and y < self.size[1]
+
     def quit(self):
         pass
 

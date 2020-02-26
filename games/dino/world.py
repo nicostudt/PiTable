@@ -1,6 +1,5 @@
 from player import Player
 from obstacle import Obstacle
-import utils.simplexnoise.noise as snoise
 import utils.colors as colors
 import utils.simplexnoise.noise as snoise
 
@@ -68,7 +67,7 @@ class World():
         playerX = int(self.player.x)
 
         for i in range(playerX -2, playerX +14):
-            alpha = self.noise.noise(i*0.3) / 1.5
+            alpha = self.noise.noise(i*0.3, mul = 4.1) / 1.5
             color = colors.interpolateColor(self.grassColor,
                                             [0,0,0], alpha)
             self.drawPixel(screen, i, -1, color)

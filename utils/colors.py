@@ -12,10 +12,13 @@ hex = {
     "material_white":       "#ecf0f1",
     "material_red":         "#e74c3c",
     "material_green":       "#2ecc71",
+    "material_darkgreen":   "#1b5e20",
     "material_blue":        "#3498db",
+    "material_darkblue":    "#0D47A1",
     "material_brown":       "#795548",
     "material_darkbrown":   "#4E342E",
-
+    "material_darkorange":  "#f57f17",
+    "material_darklime":    "#9e9d24",
 }
 
 
