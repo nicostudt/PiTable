@@ -18,6 +18,7 @@ hex = {
     "material_brown":       "#795548",
     "material_darkbrown":   "#4E342E",
     "material_darkorange":  "#f57f17",
+    "material_darkpurple":  "673ab7",#"#9c27b0",
     "material_darklime":    "#9e9d24",
 }
 
@@ -30,17 +31,31 @@ def getColor(key):
 
 
 def interpolateColor(fromColor, toColor, alpha):
-    if alpha == 0:
+    if alpha <= 0:
         return fromColor
 
-    elif alpha == 1:
+    elif alpha >= 1:
         return toColor
 
     else:
-        newColor = [int(fromColor[i] + (toColor[i] - fromColor[i]) * alpha)
+        return [int(fromColor[i] + (toColor[i] - fromColor[i]) * alpha)
                     for i in range(3)]
-        return newColor
 
+def interpolateBetween(colors, alpha):
+    if alpha <= colors[0][1]:
+        return colors[0][0]
+
+    elif alpha >= colors[-1][1]:
+        return colors[-1][0]
+
+    for i in range(len(colors) -1):
+        fromC = colors[i]
+        toC = colors[i+1]
+
+        if alpha < toC[1]:
+            a = (alpha - fromC[1]) / (toC[1] -fromC[1])
+            return [int(fromC[0][i] + (toC[0][i] - fromC[0][i]) * a)
+                        for i in range(3)]
 
 def hexToRgb(value):
     value = value.lstrip('#')

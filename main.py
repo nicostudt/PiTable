@@ -3,8 +3,9 @@
 from engine.engine import Engine
 import games
 
-if __name__ == "__main__":
-    # Init Game
+
+def main():
+    # Init first "game" on screen
     game = games.Home()
 
     # Check if running on pi
@@ -16,7 +17,7 @@ if __name__ == "__main__":
 
     except (ImportError, RuntimeError):
         from display.pygamePixelDisplay import PygamePixelDisplay
-        display = PygamePixelDisplay(caption=game.getName(), gridSize=[16, 16])
+        display = PygamePixelDisplay(caption="PiTable Emulator", gridSize=[16, 16])
 
     screensaver = games.Anim()
 
@@ -24,3 +25,7 @@ if __name__ == "__main__":
     engine = Engine(game, screensaver, display)
     engine.init()
     engine.run()
+
+
+if __name__ == "__main__":
+    main()

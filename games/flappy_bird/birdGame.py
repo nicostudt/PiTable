@@ -14,11 +14,11 @@ class BirdGame(Game):
         self.noise = snoise.SimplexNoise(2, 1, 2)
         self.x = 0
         self.skyX = 0
-        self.skyDX = 3
+        self.skyDX = 2
         self.grassX = 0
         self.grassDX = 4
-        self.obstacleDx = 7
-        self.obstacleDist = 7
+        self.obstacleDx = 8
+        self.obstacleDist = 8
 
         self.initColors()
 
@@ -34,6 +34,7 @@ class BirdGame(Game):
     def initColors(self):
         self.obstacleColor = getColor("material_green")
         skyBlue = getColor("material_darkblue")
+        skyPurple = getColor("material_darkpurple")
         skyOrange = getColor("material_darkorange")
         darkGrass = getColor("material_darkgreen")
         lightGrass = getColor("material_darklime")
@@ -48,8 +49,9 @@ class BirdGame(Game):
             for i in range(100):
                 r = i/100.0
 
-                color = interpolateColor(skyOrange, skyBlue, a**0.7)
-
+                color = interpolateBetween([[skyOrange, 0.1],
+                                            [skyPurple, 0.4],
+                                            [skyBlue, 0.8]], a)
                 if r > 0.6:
                     c = (r-0.4)/0.6 *0.8 * a
                     color = interpolateColor(color, [255, 255, 255], c)
