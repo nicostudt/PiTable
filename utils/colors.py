@@ -20,6 +20,7 @@ hex = {
     "material_darkorange":  "#f57f17",
     "material_darkpurple":  "673ab7",#"#9c27b0",
     "material_darklime":    "#9e9d24",
+    "material_gold":        "#fdd835",
 }
 
 

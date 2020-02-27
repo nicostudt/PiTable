@@ -3,7 +3,7 @@
 from engine.game import Game
 import games
 from .gameEntry import GameEntry
-import games.home.font5x3 as font
+import utils.font5x3 as font
 
 
 class Home(Game):

@@ -2,13 +2,15 @@ from utils.colors import *
 
 class Player():
 
+    HEIGHT = 2
+
     def __init__(self, colorCode):
         self.color = getColor(colorCode)
         self.reset()
 
     def reset(self):
         self.x = 2
-        self.y = 5
+        self.y = 7
         self.dy = 0
         self.dead = False
 
@@ -21,8 +23,8 @@ class Player():
             self.dy = 0
             self.jumpCount = 0
 
-        elif self.y +3 > 16:
-            self.y = 16 -3
+        elif self.y +Player.HEIGHT > 16:
+            self.y = 16 -Player.HEIGHT
 
     def jump(self):
         self.dy = 25
@@ -32,7 +34,7 @@ class Player():
         x = int(self.x)
         y = int(self.y)
 
-        for j in range(3):
+        for j in range(Player.HEIGHT):
             points.append([x, y + j])
 
         return points
