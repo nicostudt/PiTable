@@ -11,6 +11,7 @@ def main():
     # Check if running on pi
     try:
         import RPi.GwwPIO as gpio
+        
 
         from display.stripDisplay import StripDisplay
         display = StripDisplay()
