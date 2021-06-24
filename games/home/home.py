@@ -9,6 +9,11 @@ import utils.font5x3 as font
 class Home(Game):
 
     GAMES = [
+        ["Pacman", [
+            [[0, 0, 0], [255, 255, 0], [255, 255, 0], [0, 0, 0]],
+            [[255, 255, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]],
+            [[255, 255, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]],
+            [[0, 0, 0], [255, 255, 0], [255, 255, 0], [0, 0, 0]]]],
         ["Bomberman", [
             [[0, 0, 0], [0, 0, 0], [0, 0, 0], [255, 255, 0]],
             [[0, 0, 0], [200, 180, 20], [230, 200, 50], [0, 0, 0]],
@@ -137,6 +142,8 @@ class Home(Game):
 
         if game == "bomberman":
             self.engine.setGame(games.Bomberman())
+        if game == "pacman":
+            self.engine.setGame(games.Pacman())
         if game == "bird":
             self.engine.setGame(games.BirdGame())
         if game == "game of life":

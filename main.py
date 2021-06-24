@@ -6,6 +6,7 @@ import games
 
 def main():
     # Init first "game" on screen
+    print("Start")
     game = games.Home()
 
     # Check if running on pi

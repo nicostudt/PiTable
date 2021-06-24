@@ -2,7 +2,7 @@
 
 import pygame
 from .display import Display
-
+import os
 
 class PygamePixelDisplay(Display):
 
@@ -19,6 +19,7 @@ class PygamePixelDisplay(Display):
 
     def init(self):
         # Create window to draw on
+        os.environ['SDL_VIDEO_CENTERED'] = '1'
         self.window = pygame.display.set_mode([self.width, self.height])
         pygame.display.set_caption(self.caption)
 
