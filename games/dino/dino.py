@@ -1,6 +1,6 @@
 from engine.game import Game
 import random
-from world import World
+from games.dino.world import World
 
 
 class Dino(Game):

@@ -1,4 +1,4 @@
-from background import Background
+from games.flappy_bird.background import Background
 from utils.colors import *
 
 

@@ -1,5 +1,5 @@
-from player import Player
-from obstacle import Obstacle
+from games.dino.player import Player
+from games.dino.obstacle import Obstacle
 import utils.colors as colors
 import utils.simplexnoise.noise as snoise
 

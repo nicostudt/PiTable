@@ -3,10 +3,10 @@ import os.path
 import utils.font5x3 as font
 from engine.game import Game
 from utils.colors import *
-from player import Player
-from obstacle import Obstacle
-from sky import Sky
-from grass import Grass
+from games.flappy_bird.player import Player
+from games.flappy_bird.obstacle import Obstacle
+from games.flappy_bird.sky import Sky
+from games.flappy_bird.grass import Grass
 
 
 class BirdGame(Game):
