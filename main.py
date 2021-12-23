@@ -18,7 +18,11 @@ def main():
 
     except (ImportError, RuntimeError):
         from display.pygamePixelDisplay import PygamePixelDisplay
-        display = PygamePixelDisplay(caption="PiTable Emulator", gridSize=[16, 16])
+        display = PygamePixelDisplay(caption="PiTable Emulator",
+                                     gridSize=[16, 16],
+                                     width=1000,
+                                     height=1000,
+                                     space=2)
 
     screensaver = games.Anim()
 

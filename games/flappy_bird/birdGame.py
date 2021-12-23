@@ -202,15 +202,16 @@ class BirdGame(Game):
 
     def displayFont(self, screen, dy, text):
         matrix = font.getTextMatrix(text)
-        dx = 8 -len(matrix[0])//2
+        dx = 8 - len(matrix[0])//2
 
         for j, row in enumerate(matrix):
             y = j + dy
             color = self.textColor
-            if y > 8 and y < 14:
+            if 8 < y < 14:
                 color = self.goldTextColor
 
             for x, value in enumerate(row):
-                if value == 0: continue
+                if value == 0:
+                    continue
 
                 screen.setPixel(x + dx, y, color)

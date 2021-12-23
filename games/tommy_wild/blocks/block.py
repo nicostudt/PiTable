@@ -1,4 +1,4 @@
-from .. import colors
+import utils.colors as colors
 
 
 class Block():

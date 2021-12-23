@@ -1,4 +1,4 @@
-import games.tommy_wild.colors as colors
+import utils.colors as colors
 
 
 class Fog():

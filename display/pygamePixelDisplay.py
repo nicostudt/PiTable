@@ -6,7 +6,7 @@ import os
 
 class PygamePixelDisplay(Display):
 
-    def __init__(self, caption="Default", width=1000, height=1000,
+    def __init__(self, caption="Default", width=600, height=600,
                  gridSize=[16, 16], space=4):
 
         Display.__init__(self)

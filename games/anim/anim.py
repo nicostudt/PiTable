@@ -50,8 +50,8 @@ class Anim(Game):
             self.timer -= self.switchTime
             self.updateGifIdx()
 
-    def render(self, screen):
-        screen.fill([0, 0, 0])
+    def render(self, display):
+        display.fill([0, 0, 0])
 
         sheet = self.sheets[self.gifIdx]
         self.counter = (self.counter + 1) % sheet.length
@@ -60,17 +60,6 @@ class Anim(Game):
         for y in range(16):
             for x in range(16):
                 color = frame.get_at((x, y))[:3]
-                screen.setPixel(x, y, color)
+                display.setPixel(x, y, color)
 
-        """
-        self.counter += 1
-
-        if self.counter % 2 == 0:
-            for y in range(16):
-                for x in range(16):
-                    r = random.randint(0, 255)
-                    g = random.randint(0, 255)
-                    b = random.randint(0, 255)
-                    screen.setPixel(x, y, [r, g, b])
-        """
-        screen.show()
+        display.show()

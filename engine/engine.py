@@ -63,7 +63,7 @@ class Engine(object):
         self.home.setEngine(self)
 
         self.screensaver = screensaver
-        self.screensaverTime = 60 * 3
+        self.screensaverTime = 60 * 30
 
         self.display = display
         self.fixStep = True
@@ -157,7 +157,6 @@ class Engine(object):
                 return
 
         for event in events:
-
             if event.type == pygame.QUIT:
                 self.running = False
 

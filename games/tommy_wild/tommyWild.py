@@ -1,4 +1,4 @@
-import games.tommy_wild.colors as colors
+import utils.colors as colors
 from engine.game import Game
 from .camera import Camera
 from .fog import Fog

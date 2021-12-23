@@ -1,4 +1,4 @@
-import games.tommy_wild.colors as colors
+import utils.colors as colors
 from games.tommy_wild.pos import Pos
 from games.tommy_wild.blocks.block import Block
 
